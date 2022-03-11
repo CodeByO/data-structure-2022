@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-//[API] wcat 
+//[Name] wcat 
 //[DESC] 인자로 받은 파일을 열어서 안에 있는 문자열 데이터를 출력
 
 int main(int argc, char* argv[]){
