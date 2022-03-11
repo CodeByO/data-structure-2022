@@ -8,7 +8,7 @@
 //[DOING] 인자가 너무 많을 때 프로그램이 터지는지 다른 에러가 발생하는지 테스트
 
 int main(int argc, char* argv[]){
-    if (argc < 2) {
+    if (argc < 2) { // 인자가 없으면 프로그램 종료
 	    exit(0);
     }
     int i;
