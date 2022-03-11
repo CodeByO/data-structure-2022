@@ -9,8 +9,7 @@
 
 int main(int argc, char* argv[]){
     if (argc < 2) {
-	    printf("usage: wcat <file>\n");
-	    exit(1);
+	    exit(0);
     }
     int i;
     for(i = 1; i < argc; i++){ // 인자로 받은 갯수 만큼 파일을 읽어서 출력한다.
@@ -19,7 +18,7 @@ int main(int argc, char* argv[]){
         int size; 
 
         if(fp == NULL){ // 파일 읽가 실패 하면 예외처리
-            printf("can not open file\n");
+            printf("wcat: cannot open file\n");
             exit(1);
         }
 
@@ -35,7 +34,7 @@ int main(int argc, char* argv[]){
         fseek(fp, 0, SEEK_SET); // 파일 데이터를 읽기 위해 파일 포인터를 다시 파일의 맨 처음으로 이동
         fread(buffer, size , 1 , fp); // 실제 파일 데이터를 읽음
 
-        printf("%s\n", buffer); 
+        printf("%s", buffer); 
 
         fclose(fp);
 
